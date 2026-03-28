@@ -1,0 +1,26 @@
+# Node modules
+**/node_modules/
+dist/
+
+# Python Virtual Environments (Crucial)
+backend/Lib/
+backend/Scripts/
+backend/Include/
+backend/share/
+**/.venv/
+**/venv/
+**/env/
+
+# Python Cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Environment variables
+**/.env
+**/.env.*
+
+# OS files
+.DS_Store
+Thumbs.db

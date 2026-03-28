@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-container": "#001e5a",
+              "error-container": "#9f0519",
+              "on-primary": "#002873",
+              "surface-container-highest": "#1b2055",
+              "tertiary-fixed": "#fe9cf4",
+              "primary-fixed": "#7b9cff",
+              "on-primary-fixed-variant": "#00266e",
+              "on-secondary-fixed-variant": "#6514d6",
+              "on-surface-variant": "#a5a8d5",
+              "error-dim": "#d7383b",
+              "surface-container-high": "#161a4b",
+              "on-primary-fixed": "#000000",
+              "error": "#ff716c",
+              "surface-dim": "#06092f",
+              "surface-container": "#101442",
+              "on-secondary": "#2b0065",
+              "primary": "#90abff",
+              "on-surface": "#e3e3ff",
+              "primary-fixed-dim": "#658eff",
+              "on-tertiary": "#722070",
+              "inverse-on-surface": "#4f527a",
+              "surface": "#06092f",
+              "on-secondary-fixed": "#430097",
+              "surface-variant": "#1b2055",
+              "surface-tint": "#90abff",
+              "secondary-fixed-dim": "#d0b8ff",
+              "surface-container-lowest": "#000000",
+              "primary-dim": "#316bf3",
+              "secondary-fixed": "#dcc9ff",
+              "on-tertiary-fixed": "#480049",
+              "tertiary-dim": "#ef8fe5",
+              "secondary-dim": "#8a4cfc",
+              "surface-container-low": "#0a0e38",
+              "tertiary": "#ffb4f4",
+              "on-tertiary-container": "#661466",
+              "inverse-primary": "#0053dc",
+              "tertiary-container": "#fe9cf4",
+              "secondary-container": "#6001d1",
+              "surface-bright": "#212660",
+              "inverse-surface": "#fbf8ff",
+              "on-tertiary-fixed-variant": "#711f6f",
+              "on-error-container": "#ffa8a3",
+              "on-background": "#e3e3ff",
+              "on-secondary-container": "#e1d0ff",
+              "primary-container": "#7b9cff",
+              "tertiary-fixed-dim": "#ef8fe5",
+              "secondary": "#af88ff",
+              "background": "#06092f",
+              "on-error": "#490006",
+              "outline-variant": "#41456c",
+              "outline": "#6f729d"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      body {
+        background-color: #06092f;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body text-on-surface selection:bg-primary/30 min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 backdrop-blur-xl bg-[#06092f]/80 shadow-[0_40px_60px_-5px_rgba(227,227,255,0.06)]">
+<div class="flex items-center gap-4">
+<button class="text-[#90abff] hover:bg-[#1b2055] transition-colors duration-300 p-2 rounded-xl scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="text-2xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#90abff] to-[#af88ff]">SMMF</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/20">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="A clean minimalist user profile silhouette in a modern dark blue gradient background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9ZIWuEd1HRWo6nNnLUMhu5EikFxsSpb9zOFa2tsJlpqs3pxax6vssRAq6Ve8g6uk094bTTIZ1RMbZHF8tpNubCv5LqriilXg61j2pgTz2iIb8otC_rNBIeDgbgmqGsxp5XkBMdQlZHBmjTa930kXi1PfVpkkkEQcRa28HfnaG3LGR0ski9mirxqKBzFNHa5oxihQ_A0iBwEA6UCKpC2wnxayglvAo4dzzADY_jpkkO-7HEBOnhOVgnioG3rbjbXCfENUuPVk1tmY"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Search & Filter Header -->
+<section class="mb-12">
+<h1 class="font-headline text-4xl mb-8 tracking-tight font-extrabold text-on-surface">Download History</h1>
+<div class="relative group">
+<div class="absolute inset-y-0 left-6 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl py-5 pl-16 pr-6 focus:ring-2 focus:ring-primary/20 text-title-md text-on-surface placeholder:text-outline/60 transition-all duration-300" placeholder="Search your library..." type="text"/>
+</div>
+</section>
+<!-- History Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-high rounded-lg overflow-hidden hover:bg-surface-container-highest transition-all duration-500 border border-outline-variant/5">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Media Thumbnail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic abstract visual of vibrant purple and blue digital waves flowing smoothly in dark space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeSfLHdKPDrgiwna2tv4x-GnECBA83wAG6HpnGVLR8kDtZ6ykGHP80ztsPZ6o2mSgyPp1J4LJnGpxopaLqVsoUC9m-JawDNMaIjvKA3K6qQGRJmRNuCBpSliU37O8N4TPi_iCCbVuu90hLi420s_UzD5O3JNFvr0ANMbapWisD6mu_St_8tJEPqlD9y168cUL8UuUwUpW0vgk70NC8pDLa3upcb4Mrcy1_Ip5eVOZRayTR7J_acbzb67FFBLUfxoJOJIREPxYhTWk"/>
+<div class="absolute top-4 right-4 bg-surface-bright/80 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="play_circle">play_circle</span>
+<span class="text-label-sm font-bold uppercase tracking-widest">YouTube</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-lg text-on-surface mb-2 leading-snug">The Future of AI Design: 2024 Trends</h3>
+<div class="flex items-center gap-4 text-on-surface-variant text-body-sm">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]" data-icon="database">database</span> 1.2 GB</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]" data-icon="calendar_today">calendar_today</span> Oct 12, 2023</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3 mt-6">
+<button class="flex-1 bg-gradient-to-r from-primary to-secondary text-on-primary-fixed py-3 rounded-full font-headline text-title-md hover:opacity-90 active:scale-95 transition-all">
+                            Redownload
+                        </button>
+<button class="px-5 border border-outline-variant/30 text-primary rounded-full hover:bg-primary/10 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-container-high rounded-lg overflow-hidden hover:bg-surface-container-highest transition-all duration-500 border border-outline-variant/5">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Media Thumbnail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of high-end smartphone screen displaying vibrant social media interface with glowing neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrvnvTcCAdn_3s0ikhgqpDVYHTK0LG7x4340DASp0JxVgaTjxZHbHtK_bC1Al-ywtHXUzq-8XNonNoAMLZbgu3ZAcN3sPb8FdrhHPkHAmmBtexPafu8Lj92V5FpWqeYYYOxu91J57LW6GCVZUFLWQ08_rzQ8XOnKKFizQBXPtpGxPCdKOXeodYi5uRnjbKOoO1rYhhILZmHv6fdONlhucyIghyrkl13tXiF3zKgkkfPF7dqq21JThRA8Ie9ovQ6SIda-N8FUEObJI"/>
+<div class="absolute top-4 right-4 bg-surface-bright/80 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="camera">camera</span>
+<span class="text-label-sm font-bold uppercase tracking-widest">Instagram</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-lg text-on-surface mb-2 leading-snug">Visual Storytelling Masterclass Reel</h3>
+<div class="flex items-center gap-4 text-on-surface-variant text-body-sm">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]" data-icon="database">database</span> 45 MB</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]" data-icon="calendar_today">calendar_today</span> Oct 10, 2023</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3 mt-6">
+<button class="flex-1 bg-gradient-to-r from-primary to-secondary text-on-primary-fixed py-3 rounded-full font-headline text-title-md hover:opacity-90 active:scale-95 transition-all">
+                            Redownload
+                        </button>
+<button class="px-5 border border-outline-variant/30 text-primary rounded-full hover:bg-primary/10 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-high rounded-lg overflow-hidden hover:bg-surface-container-highest transition-all duration-500 border border-outline-variant/5">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Media Thumbnail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern laptop keyboard with vibrant backlighting and software code visible on a sleek monitor in a dark studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2CQV3-lnISCGY7YAH0AYeXdZ6ezk3UVQOwFRi-IiogV4gwQlKKir92KcuV-noXDECw8XRRlHHJc2NHsW-iG49_dw4wP8L2-8sJdWMClGkdHsiKdbr37XUIQxILvF2v7iU2WbuHSI3tfoP3ix7f7-_T3KL8MOMF1xG16NRidXs98RF5Jdj-yYRTSEarFc7OvXe6hZDwFTTPjji0whwnh0H4k2xfVWPGBUvtImm6ASnlsCOTsIk7lpjVAvK9AQFQMD1sKW0MpbAg6c"/>
+<div class="absolute top-4 right-4 bg-surface-bright/80 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="movie">movie</span>
+<span class="text-label-sm font-bold uppercase tracking-widest">TikTok</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-lg text-on-surface mb-2 leading-snug">Clean Desk Setup: Minimalism Guide</h3>
+<div class="flex items-center gap-4 text-on-surface-variant text-body-sm">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]" data-icon="database">database</span> 12 MB</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]" data-icon="calendar_today">calendar_today</span> Oct 08, 2023</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3 mt-6">
+<button class="flex-1 bg-gradient-to-r from-primary to-secondary text-on-primary-fixed py-3 rounded-full font-headline text-title-md hover:opacity-90 active:scale-95 transition-all">
+                            Redownload
+                        </button>
+<button class="px-5 border border-outline-variant/30 text-primary rounded-full hover:bg-primary/10 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative bg-surface-container-high rounded-lg overflow-hidden hover:bg-surface-container-highest transition-all duration-500 border border-outline-variant/5">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Media Thumbnail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic wide shot of a futuristic data center with pulsing blue lights and high tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3ObSU96ame_MhDIGKPQgSAMJfqvehtHPUa2UFhmTDZgeVR1yiDqj3JUEvN1s17iCUhfj0H0kf7JtCfa3NVYApuFP1afDwsomqN57PDg_nGo9nkmBgRyL9G_C1JZTPFndfivRvtqWNjVzbmJgWtmRZO_tsqIM5xtnhXbVRqu9D2D97PhTOmTCGJGXflZnci8DFGjjURLAaH0fQbddoNwgPNnxceW6SO4Ew7f7GQKE04bYspaGoPVyzp3bQKmzAwOcs7h8Z0yK1Z_0"/>
+<div class="absolute top-4 right-4 bg-surface-bright/80 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="headphones">headphones</span>
+<span class="text-label-sm font-bold uppercase tracking-widest">Twitter</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-lg text-on-surface mb-2 leading-snug">Elon Musk Interview: Space Exploration</h3>
+<div class="flex items-center gap-4 text-on-surface-variant text-body-sm">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]" data-icon="database">database</span> 280 MB</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]" data-icon="calendar_today">calendar_today</span> Oct 05, 2023</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3 mt-6">
+<button class="flex-1 bg-gradient-to-r from-primary to-secondary text-on-primary-fixed py-3 rounded-full font-headline text-title-md hover:opacity-90 active:scale-95 transition-all">
+                            Redownload
+                        </button>
+<button class="px-5 border border-outline-variant/30 text-primary rounded-full hover:bg-primary/10 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#06092f]/90 backdrop-blur-lg rounded-t-[2rem] shadow-[0_-10px_40px_rgba(0,0,0,0.4)]">
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/40 px-5 py-2 hover:text-[#af88ff] transition-all tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#1b2055] text-[#90abff] rounded-2xl px-5 py-2 transition-all tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="history">history</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/40 px-5 py-2 hover:text-[#af88ff] transition-all tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="api">api</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">API</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/40 px-5 py-2 hover:text-[#af88ff] transition-all tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="workspace_premium">workspace_premium</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Premium</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+yt-dlp
+playwright
+motor
+pydantic[email]
+python-jose[cryptography]
+passlib[bcrypt]
+python-dotenv
+aiohttp

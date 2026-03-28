@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-container": "#001e5a",
+              "error-container": "#9f0519",
+              "on-primary": "#002873",
+              "surface-container-highest": "#1b2055",
+              "tertiary-fixed": "#fe9cf4",
+              "primary-fixed": "#7b9cff",
+              "on-primary-fixed-variant": "#00266e",
+              "on-secondary-fixed-variant": "#6514d6",
+              "on-surface-variant": "#a5a8d5",
+              "error-dim": "#d7383b",
+              "surface-container-high": "#161a4b",
+              "on-primary-fixed": "#000000",
+              "error": "#ff716c",
+              "surface-dim": "#06092f",
+              "surface-container": "#101442",
+              "on-secondary": "#2b0065",
+              "primary": "#90abff",
+              "on-surface": "#e3e3ff",
+              "primary-fixed-dim": "#658eff",
+              "on-tertiary": "#722070",
+              "inverse-on-surface": "#4f527a",
+              "surface": "#06092f",
+              "on-secondary-fixed": "#430097",
+              "surface-variant": "#1b2055",
+              "surface-tint": "#90abff",
+              "secondary-fixed-dim": "#d0b8ff",
+              "surface-container-lowest": "#000000",
+              "primary-dim": "#316bf3",
+              "secondary-fixed": "#dcc9ff",
+              "on-tertiary-fixed": "#480049",
+              "tertiary-dim": "#ef8fe5",
+              "secondary-dim": "#8a4cfc",
+              "surface-container-low": "#0a0e38",
+              "tertiary": "#ffb4f4",
+              "on-tertiary-container": "#661466",
+              "inverse-primary": "#0053dc",
+              "tertiary-container": "#fe9cf4",
+              "secondary-container": "#6001d1",
+              "surface-bright": "#212660",
+              "inverse-surface": "#fbf8ff",
+              "on-tertiary-fixed-variant": "#711f6f",
+              "on-error-container": "#ffa8a3",
+              "on-background": "#e3e3ff",
+              "on-secondary-container": "#e1d0ff",
+              "primary-container": "#7b9cff",
+              "tertiary-fixed-dim": "#ef8fe5",
+              "secondary": "#af88ff",
+              "background": "#06092f",
+              "on-error": "#490006",
+              "outline-variant": "#41456c",
+              "outline": "#6f729d"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .premium-gradient {
+            background: linear-gradient(135deg, #90abff 0%, #af88ff 100%);
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            background: rgba(27, 32, 85, 0.8);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 backdrop-blur-xl bg-[#06092f]/80 shadow-[0_40px_60px_-5px_rgba(227,227,255,0.06)]">
+<div class="flex items-center gap-4">
+<button class="text-[#90abff] hover:bg-[#1b2055] transition-colors duration-300 p-2 rounded-xl scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="text-2xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#90abff] to-[#af88ff] font-['Plus_Jakarta_Sans']">SMMF</span>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#1b2055] hover:border-[#90abff] transition-all cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="professional male portrait with soft studio lighting and clean blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmgChoy0uLr5CVQ3RLKX5FBXSTCOsv4mIw_Z8Rsz7J6nysGj_o5e6Sb1-iMOt8f_hLmSk1KVmNuXz6DdL1-Yf6BITFqyIvmVwaox5FyOkmNsl77KHMVv-lk8dpXnKyNn865I3e4-kOuWmGNkW9foi60_P2Df9vEmbBJ29eIlSBKu_dLn2CD8ebUX27lIrQnySSmv6iWt5UB5ELVhWYfadjpmmmHP4Sbiy-OpAdLEh4y7qXz_9LNzLwK71rwkG1FbbKCAVJjpzjedU"/>
+</div>
+</div>
+</header>
+<main class="pt-28 px-6 max-w-5xl mx-auto">
+<!-- Hero Section -->
+<section class="text-center mb-16">
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+                Elevate your <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Workflow</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto font-medium">
+                Switch to premium for lightning-fast speeds and professional API access. No ads, just pure performance.
+            </p>
+</section>
+<!-- Pricing Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+<!-- Free Plan -->
+<div class="bg-surface-container-high rounded-[2rem] p-8 flex flex-col border border-outline-variant/10 relative overflow-hidden group">
+<div class="mb-8">
+<h3 class="font-headline text-2xl font-bold mb-2">Free</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-black text-on-surface">$0</span>
+<span class="text-on-surface-variant font-medium">/ forever</span>
+</div>
+</div>
+<div class="space-y-6 mb-12 flex-grow">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-2xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Limited downloads</p>
+<p class="text-xs text-on-surface-variant">5 per day</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-2xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Ads included</p>
+<p class="text-xs text-on-surface-variant">Standard browsing experience</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-2xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="speed">speed</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Normal speed</p>
+<p class="text-xs text-on-surface-variant">Shared bandwidth</p>
+</div>
+</div>
+</div>
+<button class="w-full py-4 rounded-full border border-outline-variant text-primary font-bold hover:bg-surface-container-highest transition-all active:scale-95">
+                    Current Plan
+                </button>
+</div>
+<!-- Premium Plan -->
+<div class="premium-gradient rounded-[2rem] p-8 flex flex-col relative overflow-hidden shadow-[0_40px_100px_-20px_rgba(144,171,255,0.3)] transform scale-105 z-10">
+<!-- Most Popular Tag -->
+<div class="absolute top-6 right-6 bg-surface-container-lowest text-primary text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
+                    Most Popular
+                </div>
+<div class="mb-8">
+<h3 class="font-headline text-2xl font-bold text-on-primary-fixed mb-2">Premium</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-black text-on-primary-fixed">$9.99</span>
+<span class="text-on-primary-fixed/70 font-medium">/ month</span>
+</div>
+</div>
+<div class="space-y-6 mb-12 flex-grow">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-2xl bg-on-primary-fixed/10 flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined" data-icon="all_inclusive" style="font-variation-settings: 'FILL' 1;">all_inclusive</span>
+</div>
+<div>
+<p class="font-semibold text-on-primary-fixed">Unlimited downloads</p>
+<p class="text-xs text-on-primary-fixed/70">No daily caps</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-2xl bg-on-primary-fixed/10 flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined" data-icon="block" style="font-variation-settings: 'FILL' 1;">block</span>
+</div>
+<div>
+<p class="font-semibold text-on-primary-fixed">Zero Ads</p>
+<p class="text-xs text-on-primary-fixed/70">Pure editorial interface</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-2xl bg-on-primary-fixed/10 flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<p class="font-semibold text-on-primary-fixed">Ultra-Fast speed</p>
+<p class="text-xs text-on-primary-fixed/70">Priority server routing</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-2xl bg-on-primary-fixed/10 flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined" data-icon="api" style="font-variation-settings: 'FILL' 1;">api</span>
+</div>
+<div>
+<p class="font-semibold text-on-primary-fixed">Full API Access</p>
+<p class="text-xs text-on-primary-fixed/70">Integrate into your app</p>
+</div>
+</div>
+</div>
+<button class="w-full py-5 rounded-full bg-surface-container-lowest text-primary font-extrabold text-lg shadow-xl hover:scale-[1.02] active:scale-95 transition-all">
+                    Upgrade Now
+                </button>
+</div>
+</div>
+<!-- Comparative Feature List -->
+<section class="mt-24 mb-12">
+<h2 class="font-headline text-3xl font-bold text-center mb-12">Deep Dive Comparison</h2>
+<div class="bg-surface-container-low rounded-[2rem] overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/50">
+<th class="p-6 font-headline text-sm font-bold uppercase tracking-widest text-on-surface-variant">Feature</th>
+<th class="p-6 font-headline text-sm font-bold uppercase tracking-widest text-on-surface-variant text-center">Free</th>
+<th class="p-6 font-headline text-sm font-bold uppercase tracking-widest text-primary text-center">Premium</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr>
+<td class="p-6 font-medium">Download Capacity</td>
+<td class="p-6 text-center text-on-surface-variant">5 files/day</td>
+<td class="p-6 text-center text-primary font-bold">Infinite</td>
+</tr>
+<tr>
+<td class="p-6 font-medium">Ad Experience</td>
+<td class="p-6 text-center text-on-surface-variant">Banner &amp; Interstitial</td>
+<td class="p-6 text-center text-primary font-bold">100% Ad-Free</td>
+</tr>
+<tr>
+<td class="p-6 font-medium">Network Priority</td>
+<td class="p-6 text-center text-on-surface-variant">Standard</td>
+<td class="p-6 text-center text-primary font-bold">VVIP Tier</td>
+</tr>
+<tr>
+<td class="p-6 font-medium">Concurrent Tasks</td>
+<td class="p-6 text-center text-on-surface-variant">1 Task</td>
+<td class="p-6 text-center text-primary font-bold">Up to 20 Tasks</td>
+</tr>
+<tr>
+<td class="p-6 font-medium">API Endpoints</td>
+<td class="p-6 text-center text-on-surface-variant"><span class="material-symbols-outlined text-error-dim" data-icon="close">close</span></td>
+<td class="p-6 text-center text-primary font-bold"><span class="material-symbols-outlined" data-icon="check">check</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#06092f]/90 backdrop-blur-lg rounded-t-[2rem] shadow-[0_-10px_40px_rgba(0,0,0,0.4)]">
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/40 px-5 py-2 hover:text-[#af88ff] transition-all tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/40 px-5 py-2 hover:text-[#af88ff] transition-all tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="history">history</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/40 px-5 py-2 hover:text-[#af88ff] transition-all tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="api">api</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">API</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#1b2055] text-[#90abff] rounded-2xl px-5 py-2 tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Premium</span>
+</a>
+</nav>
+</body></html>

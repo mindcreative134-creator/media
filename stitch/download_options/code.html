@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-container": "#001e5a",
+            "error-container": "#9f0519",
+            "on-primary": "#002873",
+            "surface-container-highest": "#1b2055",
+            "tertiary-fixed": "#fe9cf4",
+            "primary-fixed": "#7b9cff",
+            "on-primary-fixed-variant": "#00266e",
+            "on-secondary-fixed-variant": "#6514d6",
+            "on-surface-variant": "#a5a8d5",
+            "error-dim": "#d7383b",
+            "surface-container-high": "#161a4b",
+            "on-primary-fixed": "#000000",
+            "error": "#ff716c",
+            "surface-dim": "#06092f",
+            "surface-container": "#101442",
+            "on-secondary": "#2b0065",
+            "primary": "#90abff",
+            "on-surface": "#e3e3ff",
+            "primary-fixed-dim": "#658eff",
+            "on-tertiary": "#722070",
+            "inverse-on-surface": "#4f527a",
+            "surface": "#06092f",
+            "on-secondary-fixed": "#430097",
+            "surface-variant": "#1b2055",
+            "surface-tint": "#90abff",
+            "secondary-fixed-dim": "#d0b8ff",
+            "surface-container-lowest": "#000000",
+            "primary-dim": "#316bf3",
+            "secondary-fixed": "#dcc9ff",
+            "on-tertiary-fixed": "#480049",
+            "tertiary-dim": "#ef8fe5",
+            "secondary-dim": "#8a4cfc",
+            "surface-container-low": "#0a0e38",
+            "tertiary": "#ffb4f4",
+            "on-tertiary-container": "#661466",
+            "inverse-primary": "#0053dc",
+            "tertiary-container": "#fe9cf4",
+            "secondary-container": "#6001d1",
+            "surface-bright": "#212660",
+            "inverse-surface": "#fbf8ff",
+            "on-tertiary-fixed-variant": "#711f6f",
+            "on-error-container": "#ffa8a3",
+            "on-background": "#e3e3ff",
+            "on-secondary-container": "#e1d0ff",
+            "primary-container": "#7b9cff",
+            "tertiary-fixed-dim": "#ef8fe5",
+            "secondary": "#af88ff",
+            "background": "#06092f",
+            "on-error": "#490006",
+            "outline-variant": "#41456c",
+            "outline": "#6f729d"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(123, 156, 255, 0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .signature-gradient {
+      background: linear-gradient(135deg, #90abff 0%, #af88ff 100%);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen selection:bg-primary/30">
+<!-- Shared Component: TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 backdrop-blur-xl bg-[#06092f]/80 shadow-[0_40px_60px_-5px_rgba(227,227,255,0.06)]">
+<div class="flex items-center gap-4">
+<button class="text-[#90abff] hover:bg-[#1b2055] transition-colors duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-2xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#90abff] to-[#af88ff] font-headline">SMMF</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-outline-variant/15 overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="close-up portrait of a young professional man with a friendly expression in a modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2AZLOQ2ImCCOATeLoIIcc5Xx9WSnSYUGU3D2B3POWhUjPBp4CpUCRbdYmVuA1xhIW9HkVeoBdA0tDKMEvq9qzeiEaF4c5XxKteyVvwv1SUNYoxT13hMmpSqgMYUJ_IdIvqiaarTBmqCuRK_MM0g7enwEuVGtH8T05j2pp2jz-gsm8mqey2m1go-SFBapkCch4-vxkHa12ZsqI4Y7fSELi1T-COLBk0Dxu-my7jqi8uVJpp25cUv_lIgpquOC4FVfXLRWWrpkTvYA"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Media Preview Section (Asymmetric Layout) -->
+<section class="mb-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-7 relative group">
+<div class="absolute -inset-1 signature-gradient opacity-20 blur-2xl rounded-xl group-hover:opacity-30 transition duration-1000"></div>
+<div class="relative bg-surface-container-high rounded-xl overflow-hidden aspect-video shadow-2xl">
+<img alt="Video Thumbnail" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-700" data-alt="high-quality social media video frame showing cinematic urban landscape at night with neon lights reflecting on wet pavement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVVs-WvrYvMSjP-dJQ_Ypwv3TFpZTD86kTOl2WeUy3VUBtZLmnxiTW7_Lnx8QctWRDJ-vOmgdLv-K0VLNeXI9CtpZxGdGPwhbxl_ufHXlSHRBYJbgnOqKz02ymr6PEMcjom1vFjhAgdxcGW9bVuAstnU90OO4AJtNUkYmSH518kv4zNDC197nzEC5ybdYV9k0aBcVnJt_NsZ-qnBW1bDbSQra7hQOrTEJw7020mLgBG9LS9ZSx97CVfYT9Yu7K3VjGVBIeXdUco_8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+<span class="bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full text-primary font-headline font-bold text-xs tracking-widest uppercase">04:12</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 pt-2">
+<h2 class="font-headline font-extrabold text-3xl leading-tight mb-4 text-on-surface">
+          Night City Cyberpunk - Cinematic 4K Drone Footage
+        </h2>
+<div class="flex flex-wrap gap-2 mb-6">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-bright text-on-surface-variant text-xs font-medium border border-outline-variant/10">
+<span class="material-symbols-outlined text-[16px]">visibility</span> 1.2M Views
+          </div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-bright text-on-surface-variant text-xs font-medium border border-outline-variant/10">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span> 84K
+          </div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-bright text-on-surface-variant text-xs font-medium border border-outline-variant/10">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span> 2 days ago
+          </div>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 opacity-80">
+          Ready for download. Choose your preferred quality and format from the options below. High-definition options are optimized for fast delivery.
+        </p>
+</div>
+</section>
+<!-- Download Options Section -->
+<section>
+<div class="flex items-end justify-between mb-8">
+<h3 class="font-headline font-bold text-xl text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">download_for_offline</span>
+          Available Formats
+        </h3>
+<span class="text-on-surface-variant text-xs font-medium uppercase tracking-widest opacity-60">Results for: smmf.io/v/8h2k9l</span>
+</div>
+<div class="space-y-4">
+<!-- Option 1: Premium 1080p -->
+<div class="glass-card flex items-center justify-between p-5 rounded-xl border border-outline-variant/15 hover:bg-surface-container-highest transition-all group">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary-container/20 text-primary">
+<span class="material-symbols-outlined text-3xl">movie</span>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-1">
+<span class="font-headline font-bold text-lg text-on-surface">MP4 - 1080p (Full HD)</span>
+<span class="signature-gradient text-on-primary-fixed text-[10px] font-black uppercase px-2 py-0.5 rounded-full shadow-lg">Premium</span>
+</div>
+<span class="text-on-surface-variant text-xs font-medium font-headline tracking-tight">Size: 142.5 MB • 60fps • H.264</span>
+</div>
+</div>
+<button class="signature-gradient h-12 px-6 rounded-full flex items-center gap-2 text-on-primary-fixed font-bold text-sm hover:shadow-[0_0_20px_rgba(144,171,255,0.4)] transition-shadow scale-95 active:scale-90">
+<span class="material-symbols-outlined text-lg">download</span>
+            Download
+          </button>
+</div>
+<!-- Option 2: 720p -->
+<div class="bg-surface-container-high flex items-center justify-between p-5 rounded-xl border border-outline-variant/5 hover:bg-surface-container-highest transition-all group">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-bright text-on-surface-variant">
+<span class="material-symbols-outlined text-3xl">hd</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg text-on-surface mb-1">MP4 - 720p</h4>
+<span class="text-on-surface-variant text-xs font-medium font-headline tracking-tight">Size: 48.2 MB • 30fps • Standard</span>
+</div>
+</div>
+<button class="border border-outline-variant text-primary h-12 px-6 rounded-full flex items-center gap-2 font-bold text-sm hover:bg-primary/10 transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined text-lg">download</span>
+            Download
+          </button>
+</div>
+<!-- Option 3: Audio -->
+<div class="bg-surface-container-high flex items-center justify-between p-5 rounded-xl border border-outline-variant/5 hover:bg-surface-container-highest transition-all group">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-bright text-tertiary">
+<span class="material-symbols-outlined text-3xl">music_note</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg text-on-surface mb-1">MP3 - High Quality Audio</h4>
+<span class="text-on-surface-variant text-xs font-medium font-headline tracking-tight">Size: 6.1 MB • 320kbps • Stereo</span>
+</div>
+</div>
+<button class="border border-outline-variant text-primary h-12 px-6 rounded-full flex items-center gap-2 font-bold text-sm hover:bg-primary/10 transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined text-lg">download</span>
+            Download
+          </button>
+</div>
+<!-- Option 4: Thumbnail -->
+<div class="bg-surface-container-high flex items-center justify-between p-5 rounded-xl border border-outline-variant/5 hover:bg-surface-container-highest transition-all group">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-bright text-secondary">
+<span class="material-symbols-outlined text-3xl">image</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg text-on-surface mb-1">Thumbnail Image</h4>
+<span class="text-on-surface-variant text-xs font-medium font-headline tracking-tight">Size: 1.2 MB • 1920x1080 • JPG</span>
+</div>
+</div>
+<button class="border border-outline-variant text-primary h-12 px-6 rounded-full flex items-center gap-2 font-bold text-sm hover:bg-primary/10 transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined text-lg">download</span>
+            Download
+          </button>
+</div>
+</div>
+</section>
+<!-- Success Message (Using Tertiary Sophistication) -->
+<div class="mt-12 p-6 rounded-2xl bg-tertiary/5 border border-tertiary/20 flex gap-4 items-center">
+<div class="w-10 h-10 rounded-full bg-tertiary/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<p class="font-headline font-semibold text-tertiary">Link Verified Successfully</p>
+<p class="text-xs text-on-surface-variant">All download nodes are active and optimized for your region.</p>
+</div>
+</div>
+</main>
+<!-- Shared Component: BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#06092f]/90 backdrop-blur-lg rounded-t-[2rem] shadow-[0_-10px_40px_rgba(0,0,0,0.4)]">
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/40 px-5 py-2 hover:text-[#af88ff] transition-all tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/40 px-5 py-2 hover:text-[#af88ff] transition-all tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/40 px-5 py-2 hover:text-[#af88ff] transition-all tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined">api</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">API</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e3e3ff]/40 px-5 py-2 hover:text-[#af88ff] transition-all tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Premium</span>
+</a>
+</nav>
+</body></html>

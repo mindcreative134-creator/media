@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .signature-gradient {
+    background: linear-gradient(135deg, #90abff 0%, #af88ff 100%);
+  }
+  .glass-panel {
+    @apply backdrop-blur-[20px] bg-opacity-10 bg-[#7b9cff];
+  }
+}
+
+body {
+  @apply bg-[#06092f] text-[#e3e3ff] font-body;
+}
