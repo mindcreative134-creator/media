@@ -3,9 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from core.scraper import MediaFetcher
 from pydantic import BaseModel
 from core.database import connect_to_mongo, close_mongo_connection, get_database
-from core.auth import validate_api_key
-from typing import Optional
-from datetime import datetime
+from core.auth import validate_api_key, get_password_hash, authenticate_user, create_access_token
+from typing import Optional, List
+from datetime import datetime, timedelta
 import secrets
 
 app = FastAPI(title="SMMF API")
@@ -32,9 +32,45 @@ fetcher = MediaFetcher()
 class FetchRequest(BaseModel):
     url: str
 
+class UserRegister(BaseModel):
+    email: str
+    password: str
+    full_name: Optional[str] = None
+
+class UserLogin(BaseModel):
+    email: str
+    password: str
+
 @app.get("/")
 async def root():
     return {"message": "SMMF API is running"}
+
+@app.post("/register")
+async def register(user: UserRegister):
+    db = get_database()
+    existing_user = await db.users.find_one({"email": user.email})
+    if existing_user:
+        raise HTTPException(status_code=400, detail="Email already registered")
+    
+    hashed_password = get_password_hash(user.password)
+    new_user = {
+        "email": user.email,
+        "hashed_password": hashed_password,
+        "full_name": user.full_name,
+        "plan": "free",
+        "created_at": datetime.utcnow()
+    }
+    await db.users.insert_one(new_user)
+    return {"message": "User registered successfully"}
+
+@app.post("/login")
+async def login(user: UserLogin):
+    authenticated_user = await authenticate_user(user.email, user.password)
+    if not authenticated_user:
+        raise HTTPException(status_code=401, detail="Invalid email or password")
+    
+    access_token = create_access_token(data={"sub": authenticated_user["email"]})
+    return {"access_token": access_token, "token_type": "bearer", "user": {"email": authenticated_user["email"], "full_name": authenticated_user.get("full_name"), "plan": authenticated_user.get("plan")}}
 
 @app.post("/fetch")
 async def fetch_media(
